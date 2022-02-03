@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: todel-dev-eventlistener
+  namespace: todel-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: todel-dev-trigger

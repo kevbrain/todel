@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: todel-dev-trigger
+  namespace: todel-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: todel-dev-triggerbinding
+  template:
+    ref: todel-dev-triggertemplate

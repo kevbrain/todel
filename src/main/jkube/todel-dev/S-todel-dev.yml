@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: todel-secret-0
+  labels:
+    app: todel    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 
